@@ -1,16 +1,14 @@
 *** Settings ***
 Documentation    Nome de documento
 Library    SeleniumLibrary
+Resource    ../resources/POM/LandingPage.robot
 
 *** Variables ***
 ${LOGIN URL}      https://www.amazon.es/
 ${BROWSER}        edge
 
 *** Test Cases ***
-keyword should exist
+Open Amazon WebSite
     [Tags]    Smoke
-    Open Browser To Login Page
+    LandingPage.Open Browser To Login Page
 
-*** Keywords ***
-Open Browser To Login Page
-    Open Browser    ${LOGIN URL}    ${BROWSER}
