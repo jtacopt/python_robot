@@ -81,10 +81,15 @@ pip list
 
 [PyCharm](https://www.jetbrains.com/pycharm)
 
-#### Install IntelliBot
+#### Install Robot Framework Language Server
+
+Add a Debug Configuration for Robot Framework
+
+Arguments as:
+>-d results
 
 ## Execution
 
 ```shell
-robot Tests/ShadowRoot.robot
+robot Tests/Playgound.robot
 ```
