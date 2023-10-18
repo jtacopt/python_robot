@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation   Imports
-Library         SeleniumLibrary     timeout=0:00:10
 Resource        ../Resources/POM/ShadowDOM.robot
 Resource        ../Resources/POM/AJAXData.robot
 Resource        ../Resources/POM/VerifyText.robot
@@ -30,6 +29,9 @@ Verify Text Test
 Test Custom Library
     Open Mouse Over Page
     Click N Times in Link  5
+
+Test Sauce Labs Bindings
+    Log  Test
 
 
 

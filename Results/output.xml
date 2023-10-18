@@ -1,60 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231018 16:28:34.202" rpa="false" schemaversion="4">
-<suite id="s1" name="BookerAPI" source="C:\Users\carvajoa\PycharmProjects\python_robot\Tests\BookerAPI.robot">
-<test id="s1-t1" name="Create Token" line="6">
-<kw name="GET" library="RequestsLibrary">
-<var>${reponse}</var>
-<arg>https://restful-booker.herokuapp.com/booking</arg>
-<doc>Sends a GET request.</doc>
-<msg timestamp="20231018 16:28:35.451" level="INFO">GET Request : url=https://restful-booker.herokuapp.com/booking 
- path_url=/booking 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg timestamp="20231018 16:28:35.452" level="INFO">GET Response : url=https://restful-booker.herokuapp.com/booking 
- status=200, reason=OK 
- headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697642915&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=nxtIATGqmN%2B4aSAMzSAgipax31MdmaBDaX0IPjmSiPM%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1697642915&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=nxtIATGqmN%2B4aSAMzSAgipax31MdmaBDaX0IPjmSiPM%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '47201', 'Etag': 'W/"b861-WjuUcLhEpcVASLbFU4CIIlMPsYE"', 'Date': 'Wed, 18 Oct 2023 15:28:35 GMT', 'Via': '1.1 vegur'} 
- body=[{"bookingid":3247},{"bookingid":133},{"bookingid":2274},{"bookingid":2390},{"bookingid":206},{"bookingid":922},{"bookingid":811},{"bookingid":1729},{"bookingid":1510},{"bookingid":361},{"bookingid":398},{"bookingid":841},{"bookingid":2208},{"bookingid":1053},{"bookingid":1721},{"bookingid":209},{"bookingid":586},{"bookingid":3188},{"bookingid":169},{"bookingid":1784},{"bookingid":2345},{"bookingid":957},{"bookingid":2506},{"bookingid":2375},{"bookingid":483},{"bookingid":240},{"bookingid":246},{"bookingid":1548},{"bookingid":339},{"bookingid":851},{"bookingid":1790},{"bookingid":2143},{"bookingid":853},{"bookingid":3118},{"bookingid":2771},{"bookingid":3254},{"bookingid":3003},{"bookingid":43},{"bookingid":457},{"bookingid":2876},{"bookingid":2088},{"bookingid":1444},{"bookingid":2514},{"bookingid":2326},{"bookingid":1665},{"bookingid":2904},{"bookingid":2453},{"bookingid":1748},{"bookingid":3339},{"bookingid":1438},{"bookingid":2054},{"bookingid":3405},{"bookingid":2570},{"bookingid":372},{"bookingid":1376},{"bookingid":1217},{"bookingid":2899},{"bookingid":2380},{"bookingid":3196},{"bookingid":1146},{"bookingid":2220},{"bookingid":1625},{"bookingid":3446},{"bookingid":117},{"bookingid":435},{"bookingid":109},{"bookingid":3366},{"bookingid":1963},{"bookingid":268},{"bookingid":1256},{"bookingid":3146},{"bookingid":1426},{"bookingid":134},{"bookingid":2244},{"bookingid":2577},{"bookingid":885},{"bookingid":3163},{"bookingid":2408},{"bookingid":40},{"bookingid":3467},{"bookingid":1238},{"bookingid":152},{"bookingid":2643},{"bookingid":1432},{"bookingid":1614},{"bookingid":3212},{"bookingid":3431},{"bookingid":375},{"bookingid":878},{"bookingid":2607},{"bookingid":2986},{"bookingid":3424},{"bookingid":1263},{"bookingid":92},{"bookingid":719},{"bookingid":3012},{"bookingid":1208},{"bookingid":783},{"bookingid":713},{"bookingid":2194},{"bookingid":269},{"bookingid":2516},{"bookingid":3459},{"bookingid":1609},{"bookingid":2725},{"bookingid":1650},{"bookingid":204},{"bookingid":1066},{"bookingid":2973},{"bookingid":1979},{"bookingid":1717},{"bookingid":3128},{"bookingid":2965},{"bookingid":817},{"bookingid":2020},{"bookingid":196},{"bookingid":1914},{"bookingid":1986},{"bookingid":2658},{"bookingid":2745},{"bookingid":1035},{"bookingid":1684},{"bookingid":3251},{"bookingid":1093},{"bookingid":2620},{"bookingid":1232},{"bookingid":2323},{"bookingid":3471},{"bookingid":2901},{"bookingid":2102},{"bookingid":2152},{"bookingid":1135},{"bookingid":2295},{"bookingid":3325},{"bookingid":1620},{"bookingid":1956},{"bookingid":2638},{"bookingid":1856},{"bookingid":3512},{"bookingid":321},{"bookingid":2252},{"bookingid":698},{"bookingid":2807},{"bookingid":678},{"bookingid":363},{"bookingid":2669},{"bookingid":3515},{"bookingid":3350},{"bookingid":3322},{"bookingid":626},{"bookingid":360},{"bookingid":544},{"bookingid":251},{"bookingid":2920},{"bookingid":2616},{"bookingid":2282},{"bookingid":1108},{"bookingid":342},{"bookingid":241},{"bookingid":2907},{"bookingid":2777},{"bookingid":2327},{"bookingid":2010},{"bookingid":538},{"bookingid":1176},{"bookingid":1495},{"bookingid":3143},{"bookingid":3303},{"bookingid":42},{"bookingid":3460},{"bookingid":501},{"bookingid":171},{"bookingid":1657},{"bookingid":507},{"bookingid":1060},{"bookingid":3439},{"bookingid":15},{"bookingid":3356},{"bookingid":1341},{"bookingid":2731},{"bookingid":2767},{"bookingid":2601},{"bookingid":3327},{"bookingid":166},{"bookingid":3499},{"bookingid":2730},{"bookingid":2619},{"bookingid":3103},{"bookingid":73},{"bookingid":1001},{"bookingid":2097},{"bookingid":578},{"bookingid":1033},{"bookingid":836},{"bookingid":392},{"bookingid":248},{"bookingid":810},{"bookingid":891},{"bookingid":1645},{"bookingid":2668},{"bookingid":2394},{"bookingid":1889},{"bookingid":3071},{"bookingid":3097},{"bookingid":1631},{"bookingid":327},{"bookingid":1375},{"bookingid":835},{"bookingid":2205},{"bookingid":1121},{"bookingid":2753},{"bookingid":264},{"bookingid":2415},{"bookingid":2299},{"bookingid":10},{"bookingid":1195},{"bookingid":2761},{"bookingid":1406},{"bookingid":1441},{"bookingid":3022},{"bookingid":3160},{"bookingid":1871},{"bookingid":1427},{"bookingid":3391},{"bookingid":756},{"bookingid":3019},{"bookingid":1896},{"bookingid":2307},{"bookingid":1917},{"bookingid":2175},{"bookingid":800},{"bookingid":3464},{"bookingid":2174},{"bookingid":1742},{"bookingid":290},{"bookingid":3099},{"bookingid":1925},{"bookingid":296},{"bookingid":1012},{"bookingid":990},{"bookingid":2689},{"bookingid":1552},{"bookingid":3116},{"bookingid":934},{"bookingid":3503},{"bookingid":341},{"bookingid":562},{"bookingid":2591},{"bookingid":2887},{"bookingid":2943},{"bookingid":3496},{"bookingid":82},{"bookingid":1606},{"bookingid":2928},{"bookingid":3119},{"bookingid":2738},{"bookingid":2076},{"bookingid":2708},{"bookingid":121},{"bookingid":1460},{"bookingid":213},{"bookingid":2697},{"bookingid":1123},{"bookingid":1515},{"bookingid":2188},{"bookingid":2781},{"bookingid":2847},{"bookingid":980},{"bookingid":2584},{"bookingid":728},{"bookingid":1037},{"bookingid":1290},{"bookingid":21},{"bookingid":177},{"bookingid":432},{"bookingid":1318},{"bookingid":280},{"bookingid":2691},{"bookingid":2832},{"bookingid":223},{"bookingid":410},{"bookingid":2329},{"bookingid":2285},{"bookingid":3516},{"bookingid":38},{"bookingid":517},{"bookingid":2790},{"bookingid":2234},{"bookingid":1569},{"bookingid":1945},{"bookingid":916},{"bookingid":1199},{"bookingid":690},{"bookingid":60},{"bookingid":761},{"bookingid":1328},{"bookingid":969},{"bookingid":2902},{"bookingid":1814},{"bookingid":63},{"bookingid":2018},{"bookingid":2809},{"bookingid":1333},{"bookingid":1771},{"bookingid":2557},{"bookingid":1306},{"bookingid":2011},{"bookingid":650},{"bookingid":1190},{"bookingid":553},{"bookingid":276},{"bookingid":1084},{"bookingid":3456},{"bookingid":1974},{"bookingid":861},{"bookingid":3089},{"bookingid":1813},{"bookingid":740},{"bookingid":3239},{"bookingid":2117},{"bookingid":3175},{"bookingid":2273},{"bookingid":2659},{"bookingid":305},{"bookingid":2421},{"bookingid":184},{"bookingid":1325},{"bookingid":2144},{"bookingid":2061},{"bookingid":2485},{"bookingid":24},{"bookingid":672},{"bookingid":144},{"bookingid":2422},{"bookingid":378},{"bookingid":2245},{"bookingid":1664},{"bookingid":329},{"bookingid":632},{"bookingid":1646},{"bookingid":1207},{"bookingid":364},{"bookingid":338},{"bookingid":3491},{"bookingid":1933},{"bookingid":2505},{"bookingid":2467},{"bookingid":2215},{"bookingid":2851},{"bookingid":2171},{"bookingid":3140},{"bookingid":3393},{"bookingid":48},{"bookingid":1788},{"bookingid":2723},{"bookingid":506},{"bookingid":2495},{"bookingid":2125},{"bookingid":157},{"bookingid":1512},{"bookingid":2094},{"bookingid":1543},{"bookingid":3387},{"bookingid":2891},{"bookingid":2808},{"bookingid":3367},{"bookingid":237},{"bookingid":1911},{"bookingid":3268},{"bookingid":629},{"bookingid":676},{"bookingid":765},{"bookingid":647},{"bookingid":696},{"bookingid":1225},{"bookingid":333},{"bookingid":257},{"bookingid":1969},{"bookingid":1526},{"bookingid":1737},{"bookingid":3320},{"bookingid":1394},{"bookingid":343},{"bookingid":456},{"bookingid":2789},{"bookingid":2212},{"bookingid":1913},{"bookingid":347},{"bookingid":3392},{"bookingid":1623},{"bookingid":2304},{"bookingid":3263},{"bookingid":1540},{"bookingid":1763},{"bookingid":2130},{"bookingid":763},{"bookingid":2751},{"bookingid":499},{"bookingid":2794},{"bookingid":1314},{"bookingid":643},{"bookingid":1410},{"bookingid":1937},{"bookingid":888},{"bookingid":3216},{"bookingid":3033},{"bookingid":190},{"bookingid":1580},{"bookingid":2881},{"bookingid":3125},{"bookingid":365},{"bookingid":1805},{"bookingid":2507},{"bookingid":3067},{"bookingid":18},{"bookingid":352},{"bookingid":3381},{"bookingid":31},{"bookingid":1670},{"bookingid":1957},{"bookingid":1156},{"bookingid":597},{"bookingid":1501},{"bookingid":2736},{"bookingid":2919},{"bookingid":2241},{"bookingid":2013},{"bookingid":2079},{"bookingid":2709},{"bookingid":1982},{"bookingid":1860},{"bookingid":3450},{"bookingid":2042},{"bookingid":963},{"bookingid":721},{"bookingid":1291},{"bookingid":395},{"bookingid":84},{"bookingid":236},{"bookingid":3194},{"bookingid":2193},{"bookingid":1360},{"bookingid":1942},{"bookingid":139},{"bookingid":2692},{"bookingid":604},{"bookingid":3105},{"bookingid":2935},{"bookingid":1437},{"bookingid":3363},{"bookingid":13},{"bookingid":3296},{"bookingid":658},{"bookingid":3390},{"bookingid":1163},{"bookingid":1930},{"bookingid":2539},{"bookingid":1866},{"bookingid":874},{"bookingid":3069},{"bookingid":3355},{"bookingid":2827},{"bookingid":2251},{"bookingid":1095},{"bookingid":2778},{"bookingid":99},{"bookingid":79},{"bookingid":344},{"bookingid":1586},{"bookingid":349},{"bookingid":1240},{"bookingid":1653},{"bookingid":2180},{"bookingid":1527},{"bookingid":286},{"bookingid":529},{"bookingid":3182},{"bookingid":387},{"bookingid":2229},{"bookingid":32},{"bookingid":225},{"bookingid":697},{"bookingid":1584},{"bookingid":614},{"bookingid":377},{"bookingid":70},{"bookingid":1617},{"bookingid":1781},{"bookingid":2527},{"bookingid":2444},{"bookingid":758},{"bookingid":2049},{"bookingid":1886},{"bookingid":3513},{"bookingid":1277},{"bookingid":1251},{"bookingid":2249},{"bookingid":2801},{"bookingid":1169},{"bookingid":2630},{"bookingid":1453},{"bookingid":226},{"bookingid":801},{"bookingid":901},{"bookingid":497},{"bookingid":753},{"bookingid":193},{"bookingid":291},{"bookingid":533},{"bookingid":2561},{"bookingid":3495},{"bookingid":480},{"bookingid":568},{"bookingid":856},{"bookingid":1393},{"bookingid":3107},{"bookingid":2576},{"bookingid":913},{"bookingid":1034},{"bookingid":2821},{"bookingid":424},{"bookingid":742},{"bookingid":1907},{"bookingid":1498},{"bookingid":2660},{"bookingid":2672},{"bookingid":1521},{"bookingid":143},{"bookingid":3417},{"bookingid":1162},{"bookingid":2944},{"bookingid":657},{"bookingid":512},{"bookingid":3314},{"bookingid":3183},{"bookingid":429},{"bookingid... (set the log level to DEBUG or TRACE to see the full content) 
- </msg>
-<msg timestamp="20231018 16:28:35.452" level="INFO">${reponse} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231018 16:28:34.344" endtime="20231018 16:28:35.452"/>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231018 23:58:42.580" rpa="false" schemaversion="4">
+<suite id="s1" name="PlaygroundTextInputGUI" source="C:\Users\carvajoa\PycharmProjects\python_robot\Tests\PlaygroundTextInputGUI.robot">
+<test id="s1-t1" name="Text Input" line="11">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231018 23:58:43.266" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20231018 23:58:43.265" endtime="20231018 23:58:46.066"/>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${reponse.status_code}</arg>
-<arg>200</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20231018 16:28:35.453" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20231018 16:28:35.453" endtime="20231018 16:28:35.453"/>
+<status status="PASS" starttime="20231018 23:58:43.264" endtime="20231018 23:58:46.067"/>
 </kw>
-<kw>
-<var>${response_json}=</var>
-<var>${reponse.json()}</var>
-<msg timestamp="20231018 16:28:35.454" level="FAIL">Keyword name cannot be empty.</msg>
-<status status="FAIL" starttime="20231018 16:28:35.454" endtime="20231018 16:28:35.454"/>
+<kw name="Open Text Input Page" library="TextInput">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://www.uitestingplayground.com/textinput</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231018 23:58:46.069" level="INFO">Opening url 'http://www.uitestingplayground.com/textinput'</msg>
+<status status="PASS" starttime="20231018 23:58:46.069" endtime="20231018 23:58:47.193"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>GetBookingIdsJson:${response_json}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20231018 16:28:35.454" endtime="20231018 16:28:35.454"/>
+<status status="PASS" starttime="20231018 23:58:46.068" endtime="20231018 23:58:47.194"/>
 </kw>
-<tag>API</tag>
-<status status="FAIL" starttime="20231018 16:28:34.343" endtime="20231018 16:28:35.454">Keyword name cannot be empty.</status>
+<kw name="Set New Button Name" library="TextInput">
+<arg>Name</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TEXT_INPUT_BUTTON_NAME_INPUT}</arg>
+<arg>${BUTTON_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231018 23:58:47.197" level="INFO">Typing text 'Name' into text field 'css=#newButtonName'.</msg>
+<status status="PASS" starttime="20231018 23:58:47.195" endtime="20231018 23:58:47.423"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TEXT_INPUT_BUTTON_NAME_TEXT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231018 23:58:47.424" level="INFO">Clicking element 'css=#updatingButton'.</msg>
+<status status="PASS" starttime="20231018 23:58:47.423" endtime="20231018 23:58:47.524"/>
+</kw>
+<status status="PASS" starttime="20231018 23:58:47.194" endtime="20231018 23:58:47.525"/>
+</kw>
+<kw name="Validate Button Name" library="TextInput">
+<arg>Name</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${TEXT_INPUT_BUTTON_NAME_TEXT}</arg>
+<arg>${EXPECTED_BUTTON_NAME}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231018 23:58:47.526" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg timestamp="20231018 23:58:47.528" level="INFO">Verifying element 'css=#updatingButton' contains exact text 'Name'.</msg>
+<status status="PASS" starttime="20231018 23:58:47.526" endtime="20231018 23:58:47.568"/>
+</kw>
+<status status="PASS" starttime="20231018 23:58:47.525" endtime="20231018 23:58:47.569"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20231018 23:58:47.570" endtime="20231018 23:58:53.954"/>
+</kw>
+<status status="PASS" starttime="20231018 23:58:47.569" endtime="20231018 23:58:53.954"/>
+</kw>
+<status status="PASS" starttime="20231018 23:58:43.263" endtime="20231018 23:58:53.955"/>
 </test>
-<status status="FAIL" starttime="20231018 16:28:34.203" endtime="20231018 16:28:35.455"/>
+<doc>Imports</doc>
+<status status="PASS" starttime="20231018 23:58:42.586" endtime="20231018 23:58:53.956"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">API</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="BookerAPI">BookerAPI</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="PlaygroundTextInputGUI">PlaygroundTextInputGUI</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20231018 23:58:47.526" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
 </errors>
 </robot>
