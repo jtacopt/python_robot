@@ -1,4 +1,5 @@
 *** Settings ***
+Library         ../Libraries/ParseGetBookingResponse.py
 Library         RequestsLibrary
 
 *** Test Cases ***
@@ -12,5 +13,10 @@ Exemplo de Chamada de API
     Log    bookingid:${bookingid}
     ${bookingidValue}=    Set Variable  ${bookingid['bookingid']}
     Log    bookingid_value:${bookingidValue}
-    GET  https://restful-booker.herokuapp.com/booking/${bookingidValue}
+    ${booking_reponse}=  GET  https://restful-booker.herokuapp.com/booking/${bookingidValue}
+    ${booking_json}=     Set Variable    ${booking_reponse.json()}
+    ${book_first_name}=   Get First Name   ${booking_json}
+    Log    Fist Name: ${book_first_name}
+    ${book_last_name}=    Get Last Name   ${booking_json}
+    Log    Last Name: ${book_last_name}
 
