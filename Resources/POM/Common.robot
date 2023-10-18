@@ -2,7 +2,7 @@
 Library         SeleniumLibrary     timeout=0:00:10
 
 *** Variables ***
-${BROWSER}          chrome
+${BROWSER}          headlesschrome
 
 *** Keywords ***
 Begin Web Test
