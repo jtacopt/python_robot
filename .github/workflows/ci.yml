@@ -34,6 +34,7 @@ jobs:
   generate_report:
       if: always()
       needs: [test]
+      name: Generate Report
       runs-on: ubuntu-latest
 
       steps:
@@ -42,7 +43,9 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: results
+
       - name: Send report to commit
         uses: joonvena/robotframework-reporter-action@v2.3
         with:
           gh_access_token: ${{ secrets.GITHUB_TOKEN }}
+          report_path: 'results'
