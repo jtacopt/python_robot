@@ -91,5 +91,5 @@ Arguments as:
 ## Execution
 
 ```shell
-robot Tests/Playgound.robot
+robot Tests/Playground.robot
 ```

@@ -1,0 +1,44 @@
+name: 'CD - Automation'
+
+on:
+  push:
+
+jobs:
+  test:
+    name: Run Robot Tests
+    runs-on:
+      - self-hosted
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Robot Framework
+        uses: joonvena/robotframework-docker-action@v1.0
+        with:
+          browser: 'firefox'
+          robot_threads: 2
+          robot_reports_dir: 'results'
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: results
+          path: results
+
+  generate_report:
+      if: always()
+      needs: [test]
+      runs-on:
+        - self-hosted
+      steps:
+      - uses: actions/checkout@v2
+      - name: Download reports
+        uses: actions/download-artifact@v1
+        with:
+          name: results
+      - name: Send report to commit
+        uses: joonvena/robotframework-reporter-action@v2.3
+        with:
+          gh_access_token: ${{ secrets.GITHUB_TOKEN }}
