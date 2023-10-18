@@ -4,6 +4,7 @@ Library         SeleniumLibrary     timeout=0:00:10
 Resource        ../Resources/POM/ShadowDOM.robot
 Resource        ../Resources/POM/AJAXData.robot
 Resource        ../Resources/POM/VerifyText.robot
+Resource        ../Resources/POM/MouseOver.robot
 Resource        ../Resources/POM/Common.robot
 Test Setup      Begin Web Test
 Test Teardown   End Web Test
@@ -23,5 +24,10 @@ AJAX Data Test
 Verify Text Test
     Open Verify Text Page
     Welcome Text Should be  Welcome UserName!
+
+Test Custom Library
+    Open Mouse Over Page
+    Click N Times in Link  5
+
 
 
