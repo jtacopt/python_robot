@@ -20,11 +20,10 @@ jobs:
 
       - name: Setup Install Robot
         run: |
-          pip install robotframework-seleniumlibrary
-          pip install robotframework-requests
+          pip install -r dependencies.txt
 
       - name: Run Tests
-        run: robot -d results Tests/BrookerAPI.robot
+        run: robot -d results Tests/BookerAPI.robot
 
       - name: Upload test results
         uses: actions/upload-artifact@v1
