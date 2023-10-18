@@ -12,12 +12,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Robot Framework
-        uses: joonvena/robotframework-docker-action@v1.0
+      - name: Setup python for starting the tests
+        uses: actions/setup-python@v4.7.1
         with:
-          browser: 'firefox'
-          robot_threads: 2
-          robot_reports_dir: 'results'
+          python-version: '3.12.0'
+          architecture: 'x64'
+
+      - name: Setup Install Robot
+        run: pip install robotframework-seleniumlibrary
+
+      - name: Run Tests
+        run: robot -d results Tests/Playground.robot
 
       - name: Upload test results
         uses: actions/upload-artifact@v1
