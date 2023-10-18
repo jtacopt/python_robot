@@ -16,4 +16,5 @@ Read Welcome Text
 Welcome Text Should be
     [Arguments]     ${expected_welcome_text}
     ${actual_welcome_text}  Read Welcome Text
+    Get WebElement    locator
     Element Text Should Be  ${VERIFY_TEXT_TEXT}  ${expected_welcome_text}  but it's ${actual_welcome_text}  true

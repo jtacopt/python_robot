@@ -6,8 +6,10 @@ Resource        ../Resources/POM/AJAXData.robot
 Resource        ../Resources/POM/VerifyText.robot
 Resource        ../Resources/POM/MouseOver.robot
 Resource        ../Resources/POM/Common.robot
+
 Test Setup      Begin Web Test
 Test Teardown   End Web Test
+
 *** Test Cases ***
 
 Shadow DOM

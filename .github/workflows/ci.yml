@@ -22,7 +22,7 @@ jobs:
         run: pip install robotframework-seleniumlibrary
 
       - name: Run Tests
-        run: robot -d results Tests/Playground.robot
+        run: robot -d results Tests/BrookerAPI.robot
 
       - name: Upload test results
         uses: actions/upload-artifact@v1
