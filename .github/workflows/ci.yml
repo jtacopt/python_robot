@@ -7,6 +7,16 @@ jobs:
   test:
     name: Run Robot Tests
     runs-on: ubuntu-latest
+    services:
+      chrome-standalone:
+        image: selenium/standalone-chrome:latest
+        ports:
+          - 4444:4444
+          - 5900:5900
+        options: >-
+          --shm-size="2g"
+          -e SCREEN_WIDTH=1366
+          -e SCREEN_HEIGHT=768
 
     steps:
       - name: Checkout
