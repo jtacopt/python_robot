@@ -6,7 +6,7 @@ ${BROWSER}          headlesschrome
 
 *** Keywords ***
 Begin Web Test
-    Open Browser         http://localhost:4444  about:blank  ${BROWSER}
+    Open Browser         http://localhost:4444  browser=${BROWSER}
 
 End Web Test
     close all browsers
